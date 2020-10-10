@@ -342,6 +342,7 @@ nav .menu h1{
 .work-item h1{
     color: transparent;
     font-size: 5rem;
+    letter-spacing: 0.2rem;
     -webkit-text-stroke: 1.5px white;
 }
 
