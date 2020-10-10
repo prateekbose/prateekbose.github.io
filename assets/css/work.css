@@ -285,6 +285,10 @@ nav .menu h1{
 
 
 @media only screen and (max-width:768px){
+    .menu-section{
+        gap: 10rem;
+    }
+    
     .menu-section a{
         margin: 0rem 4.5rem;
     }
@@ -305,6 +309,12 @@ nav .menu h1{
     -webkit-text-stroke: 1.5px white;
 }
 
+@media only screen and (max-width: 768px){
+    .work-title{
+        margin: 20rem 4.5rem 10rem;
+    }
+}
+
 .work-items{
     margin: 1rem 10rem 10rem;
     display: grid;
@@ -316,6 +326,8 @@ nav .menu h1{
     .work-items{
         display: flex;
         flex-direction: column;
+        margin: 4.5rem;
+        gap: 4.5rem;
     }
 }
 
@@ -432,9 +444,9 @@ footer .social{
     font-weight: 400;
 }
 
-@media only screen and (max-width: 768px){
-    .same-page-alert{
-        font-size: 3rem;
+@media only screen and (max-width: 768px){    
+    .same-page-alert h1{
+        font-size: 2.75rem;
     }
 }
 

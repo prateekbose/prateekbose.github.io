@@ -391,6 +391,10 @@ nav .menu h1{
 
 
 @media only screen and (max-width:768px){
+    .menu-section{
+        gap: 10rem;
+    }
+    
     .menu-section a{
         margin: 0rem 4.5rem;
     }
@@ -661,7 +665,7 @@ nav .menu h1{
 
 @media only screen and (max-width: 768px){
     .same-page-alert{
-        font-size: 3rem;
+        font-size: 2.75rem;
     }
 }
 
