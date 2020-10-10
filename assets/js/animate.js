@@ -15,7 +15,7 @@ const workTitle = document.querySelector('.work-section .image-div .title')
 const scroll = document.querySelector('.scroll')
 const sameButton = document.querySelector('.same-page')
 const samePageAlert = document.querySelector('.same-page-alert')
-const pageTitle = document.querySelector('nav h1 span)
+const pageTitle = document.querySelector('nav h1 span')
 
 
 const projectImg = ["assets/img/img1.jpg","assets/img/img2.jpg"]
