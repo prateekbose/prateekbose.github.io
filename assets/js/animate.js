@@ -15,6 +15,7 @@ const workTitle = document.querySelector('.work-section .image-div .title')
 const scroll = document.querySelector('.scroll')
 const sameButton = document.querySelector('.same-page')
 const samePageAlert = document.querySelector('.same-page-alert')
+const pageTitle = document.querySelector('nav h1 span)
 
 
 const projectImg = ["assets/img/img1.jpg","assets/img/img2.jpg"]
@@ -51,11 +52,13 @@ const navScroll = () => {
             if(title != "Work"){
                 scroll.style.opacity = 1
             }
+            pageTitle.style.opacity = 1
         } else {
             nav.classList.remove('nav-scroll')
             if(title != "Work"){
                 scroll.style.opacity = 0
             }
+            pageTitle.style.opacity = 0
         }
     })
 }

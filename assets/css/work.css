@@ -134,6 +134,13 @@ nav > h1{
     font-size: 3rem;
 }
 
+nav > h1 span{
+    color: transparent;
+    -webkit-text-stroke: 0.5px white;
+    opacity: 0;
+    transition: 0.3 ease-in-out;
+}
+
 nav .menu{
     display: flex;
     align-items: center;
