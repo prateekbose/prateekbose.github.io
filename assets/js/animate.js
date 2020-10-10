@@ -48,10 +48,14 @@ const navScroll = () => {
     document.addEventListener('scroll', () =>{
         if(window.scrollY > nav.offsetHeight && ![...burger.classList].includes('burger-active')){
             nav.classList.add('nav-scroll')
-            scroll.style.opacity = 0
+            if(title != "Work"){
+                scroll.style.opacity = 1
+            }
         } else {
             nav.classList.remove('nav-scroll')
-            scroll.style.opacity = 1
+            if(title != "Work"){
+                scroll.style.opacity = 0
+            }
         }
     })
 }

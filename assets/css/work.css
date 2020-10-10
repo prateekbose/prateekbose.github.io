@@ -305,6 +305,13 @@ nav .menu h1{
     gap: 1rem;
 }
 
+@media only screen and (max-width: 768px){
+    .work-items{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .work-item{
     min-height: 45vh;
     background: url('../img/img2.jpg'), rgba(0,0,0,0.2);
