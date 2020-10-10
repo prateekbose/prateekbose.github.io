@@ -1,3 +1,7 @@
+const titleList = document.querySelector('title').innerHTML.split(" ")
+const title = titleList[titleList.length - 1]
+
+
 const burger = document.querySelector('.burger')
 const menu = document.querySelector('.menu-section')
 const menuItems = document.querySelectorAll('.menu-section a')
@@ -8,7 +12,9 @@ const projectTitle = document.querySelector('.projects-section .image-div .title
 const work = document.querySelectorAll('.work div')
 const workShow = document.querySelector('.work-section .image-div')
 const workTitle = document.querySelector('.work-section .image-div .title')
-const scroll = document.querySelector('.scroll');
+const scroll = document.querySelector('.scroll')
+const sameButton = document.querySelector('.same-page')
+const samePageAlert = document.querySelector('.same-page-alert')
 
 
 const projectImg = ["assets/img/img1.jpg","assets/img/img2.jpg"]
@@ -34,6 +40,7 @@ const menuSlide = () => {
         } else if(![...nav.classList].includes('nav-scroll') && ![...burger.classList].includes('burger-active') && window.scrollY > nav.offsetHeight){
             nav.classList.add('nav-scroll')
         }
+        console.log('burger')
     })
 }
 
@@ -62,7 +69,21 @@ const itemSelect = (item,img,title) => {
     });
 }
 
-menuSlide()
-navScroll()
-itemSelect(projects,projectShow,projectTitle)
-itemSelect(work,workShow,workTitle)
+const samePage = () => {
+    sameButton.addEventListener('click', () => {
+        samePageAlert.classList.add('alert-active')
+        setTimeout(() => samePageAlert.classList.remove('alert-active'), 2500)
+    })
+}
+
+const start = () => {
+    if(title != "Work"){        
+        itemSelect(projects,projectShow,projectTitle)
+        itemSelect(work,workShow,workTitle)
+    }
+    menuSlide()
+    navScroll()
+    samePage()
+}
+
+start()
