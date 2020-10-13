@@ -12,7 +12,7 @@ html{
     margin: 0;
     padding: 0;
     font-family: 'Monument Extended', sans-serif;
-    font-size: 10px;                       
+    font-size: 10px;                        
 }
 
 
@@ -38,7 +38,6 @@ html{
 body{
     overflow-x: hidden;
     background-color: #121212;
-    scroll-behavior: smooth;  
 }
 
 .body-loading{
@@ -366,15 +365,15 @@ nav .menu h1{
     .project-select{
         display: grid;
         width: (100% - 9rem);
-        margin: 0rem 4.5rem 10rem;
-        grid-template-columns: repeat(3, 1fr);
+        margin: 0rem 4.5rem 20rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .project-select .project{
-        height: 15vh;
+        height: 20vh;
     }
 
-    .project-select .project h1:nth-child(2){
+    .project-select .project h1:nth-child(1){
         display: none;
     }
 }
@@ -484,9 +483,9 @@ nav .menu h1{
 @media only screen and (max-width: 768px){
     .project-item{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        margin: 1rem 4.5rem 5rem;
-        height: 50vh;
+        grid-template-rows: 3fr 2fr;
+        margin: 1rem 4.5rem 20rem;
+        height: 85vh;
     }
 
     .project-item .project-detail p{
@@ -494,12 +493,12 @@ nav .menu h1{
     }
 
     .project-item .project-detail ul{
-        flex-direction: row;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
     }
 
     .project-detail ul li{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }
 

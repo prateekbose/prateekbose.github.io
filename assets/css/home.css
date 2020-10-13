@@ -12,11 +12,14 @@ html{
     margin: 0;
     padding: 0;
     font-family: 'Monument Extended', sans-serif;
-    font-size: 10px;             
-    scroll-behavior: smooth;           
+    font-size: 10px;                        
 }
 
-
+@media only screen and (min-width: 1280px) and (min-resolution: 125dpi){
+    html{
+        font-size: 7.5px;
+    }
+} 
 
 @media only screen and (max-width:768px){
     html{
@@ -26,13 +29,13 @@ html{
 
 @media only screen and (min-width: 2560px){
     html{
-        font-size: 15px;
+        font-size: 12.5px;
     }
 }
 
 @media only screen and (min-width: 3840px){
     html{
-        font-size: 20px;
+        font-size: 15px;
     }
 }
 

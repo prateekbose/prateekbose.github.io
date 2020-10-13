@@ -20,6 +20,7 @@ const projectButtons = document.querySelectorAll('.project-item .image-section b
 const projectBack = document.querySelector('.project-item .image-section')
 const projectSelection = document.querySelectorAll('.project-select .project')
 const projectName = document.querySelector('.project-detail .content h1')
+const projectDetail = document.querySelector('.project-detail')
 
 const projectImg = ["assets/img/img1.jpg","assets/img/img2.jpg"]
 const projectNames = ["Project 1","Project 2","Project 3","Project 4","Project 5"]
@@ -35,6 +36,18 @@ document.onreadystatechange = () => {
         document.querySelector("body").classList.remove('body-loading')
     } 
 };
+
+const isMobile = () => {
+    if (sessionStorage.desktop)
+        return false
+    else if (localStorage.mobile)
+        return true
+
+    var mobile = ['iphone','ipad','android','blackberry','nokia','opera mini','windows mobile','windows phone','iemobile'];
+    for (var i in mobile) if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true
+
+    return false;
+}
 
 const menuSlide = () => {
     burger.addEventListener('click', () => {
@@ -114,6 +127,11 @@ const projectSelect = () => {
             setTimeout(() => projectName.style.opacity = 0, 150)
             setTimeout(() => projectName.innerHTML = projectNames[index], 250)
             setTimeout(() => projectName.style.opacity = 1, 400)
+            if(!isMobile()){
+                projectDetail.scrollIntoView({behavior: "smooth", block: "center"})
+            } else {
+                projectButtons[0].scrollIntoView({behavior: "smooth", block: "center"})
+            }
         })
     })
 }

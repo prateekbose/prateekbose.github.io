@@ -12,7 +12,7 @@ html{
     margin: 0;
     padding: 0;
     font-family: 'Monument Extended', sans-serif;
-    font-size: 10px;     
+    font-size: 10px;                        
 }
 
 
@@ -38,7 +38,6 @@ html{
 body{
     overflow-x: hidden;
     background-color: #121212;
-    scroll-behavior: smooth;                    
 }
 
 .body-loading{

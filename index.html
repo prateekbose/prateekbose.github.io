@@ -178,19 +178,7 @@
         </section>
         <script src="./assets/js/animate.js"></script>  
         <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1597754761/magicmouse/magic_mouse-1.0.js"></script>
-        <script>
-            function isMobile() {
-                if (sessionStorage.desktop)
-                    return false
-                else if (localStorage.mobile)
-                    return true
-
-                var mobile = ['iphone','ipad','android','blackberry','nokia','opera mini','windows mobile','windows phone','iemobile'];
-                for (var i in mobile) if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true
-
-                return false;
-            }
-    
+        <script>  
             if(!isMobile()){
                 ScrollReveal().reveal('.skills-section')
                 ScrollReveal().reveal('.image-section')
