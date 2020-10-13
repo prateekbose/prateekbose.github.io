@@ -12,7 +12,7 @@ const projectTitle = document.querySelector('.projects-section .image-div .title
 const work = document.querySelectorAll('.work div')
 const workShow = document.querySelector('.work-section .image-div')
 const workTitle = document.querySelector('.work-section .image-div .title')
-const scroll = document.querySelector('.scroll')
+const scroll = document.getElementById('scroll')
 const sameButton = document.querySelector('.same-page')
 const samePageAlert = document.querySelector('.same-page-alert')
 const pageTitle = document.querySelector('nav h1 span')
@@ -54,14 +54,17 @@ const navScroll = () => {
             nav.classList.add('nav-scroll')
             if(title == "Home"){
                 scroll.style.opacity = 1
+            } else{
+                pageTitle.style.opacity = 1
             }
-            pageTitle.style.opacity = 1
+            
         } else {
             nav.classList.remove('nav-scroll')
             if(title == "Home"){
                 scroll.style.opacity = 0
+            } else {
+                pageTitle.style.opacity = 0
             }
-            pageTitle.style.opacity = 0
         }
     })
 }
@@ -75,6 +78,7 @@ const itemSelect = (item,img,title) => {
             setTimeout(() => title.style.opacity = 0, 300)
             setTimeout(() => title.innerHTML = `0${index+1}`, 450)
             setTimeout(() => title.style.opacity = 1, 600)
+            console.log('image-changed')
         })
     });
 }
