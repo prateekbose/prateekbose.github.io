@@ -314,7 +314,7 @@ nav .menu h1{
     }
 
     .hero-section h2{
-        font-size: 4.5rem;
+        display: none;
     }
 
     .hero-section h1{

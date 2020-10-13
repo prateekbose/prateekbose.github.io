@@ -16,9 +16,13 @@ const scroll = document.querySelector('.scroll')
 const sameButton = document.querySelector('.same-page')
 const samePageAlert = document.querySelector('.same-page-alert')
 const pageTitle = document.querySelector('nav h1 span')
-
+const projectButtons = document.querySelectorAll('.project-item .image-section button')
+const projectBack = document.querySelector('.project-item .image-section')
+const projectSelection = document.querySelectorAll('.project-select .project')
+const projectName = document.querySelector('.project-detail .content h1')
 
 const projectImg = ["assets/img/img1.jpg","assets/img/img2.jpg"]
+const projectNames = ["Project 1","Project 2","Project 3","Project 4","Project 5"]
 
 document.onreadystatechange = () => { 
     if (document.readyState !== "complete") { 
@@ -41,7 +45,6 @@ const menuSlide = () => {
         } else if(![...nav.classList].includes('nav-scroll') && ![...burger.classList].includes('burger-active') && window.scrollY > nav.offsetHeight){
             nav.classList.add('nav-scroll')
         }
-        console.log('burger')
     })
 }
 
@@ -49,13 +52,13 @@ const navScroll = () => {
     document.addEventListener('scroll', () =>{
         if(window.scrollY > nav.offsetHeight && ![...burger.classList].includes('burger-active')){
             nav.classList.add('nav-scroll')
-            if(title != "Work"){
+            if(title == "Home"){
                 scroll.style.opacity = 1
             }
             pageTitle.style.opacity = 1
         } else {
             nav.classList.remove('nav-scroll')
-            if(title != "Work"){
+            if(title == "Home"){
                 scroll.style.opacity = 0
             }
             pageTitle.style.opacity = 0
@@ -83,10 +86,42 @@ const samePage = () => {
     })
 }
 
+const projectImage = () => {
+    let j = 0;
+    projectButtons[0].addEventListener('click', () => {
+        if(j>0 && j<=projectImg.length){
+            j--
+            projectBack.style.backgroundImage = `url(${projectImg[(j+1)%2]})`
+            console.log(j)
+        }
+    })
+    projectButtons[1].addEventListener('click', () => {
+        if(j>=0 && j<projectImg.length){
+            j++
+            projectBack.style.backgroundImage = `url(${projectImg[(j+1)%2]})`
+            console.log(j)
+        }
+    })
+}
+
+const projectSelect = () => {
+    projectSelection.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            setTimeout(() => projectName.style.opacity = 0, 150)
+            setTimeout(() => projectName.innerHTML = projectNames[index], 250)
+            setTimeout(() => projectName.style.opacity = 1, 400)
+        })
+    })
+}
+
 const start = () => {
-    if(title != "Work"){        
+    if(title == "Home"){        
         itemSelect(projects,projectShow,projectTitle)
         itemSelect(work,workShow,workTitle)
+    }
+    if(title == "Projects"){
+        projectImage()
+        projectSelect()
     }
     menuSlide()
     navScroll()
