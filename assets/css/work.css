@@ -130,6 +130,11 @@ nav h1{
     font-weight: 400;
 }
 
+nav h1 a{
+    text-decoration: none;
+    color: white;
+}
+
 nav > h1{
     font-size: 3rem;
 }
