@@ -16,9 +16,9 @@ html{
     scroll-behavior: smooth;                    
 }
 
-@media only screen and (min-width: 1280px) and (min-resolution: 125dpi){
+@media only screen and (max-width: 1919px){
     html{
-        font-size: 7.5px;
+        font-size: 7px;
     }
 } 
 
@@ -752,7 +752,6 @@ footer a{
 footer .links{
     display: flex;
     flex-direction: column;
-    font-family: 'Inconsolata', monospace;
 }
 
 footer .contact{
@@ -794,7 +793,7 @@ footer .social{
     z-index: 999;
     transition: 0.3s ease-in-out;
     opacity: 0;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Playfair Display', monospace;
 }
 
 .same-page-alert h1{
