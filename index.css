@@ -233,7 +233,8 @@ nav .burger-active .burger-icon:hover{
 }
 
 @media only screen and (max-width: 768px){
-  .image-holder-active{
+  .image-holder{
+    margin-top: -35%;
     align-items: flex-end;
   }
 
