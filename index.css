@@ -23,6 +23,12 @@ html{
   }
 }
 
+@media only screen and (max-width: 768px){
+  html{
+    font-size: 8px;
+  }
+}
+
 .loading{
   overflow: hidden;
   opacity: 0;
@@ -78,6 +84,12 @@ nav{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+@media only screen and (max-width: 768px){
+  nav{
+    padding: 1.5rem;
+  }
 }
 
 nav > h1{
@@ -167,6 +179,13 @@ nav .burger-active .burger-icon:hover{
   padding: 1rem 10rem 0rem;
 }
 
+@media only screen and (max-width: 768px){
+  .hero .hero-header{
+    font-size: 3rem;
+    padding: 1rem;
+  }
+}
+
 .image-holder{
   width: 100%;
 }
@@ -213,6 +232,21 @@ nav .burger-active .burger-icon:hover{
   background-color: rgba(0,0,0,0.3);
 }
 
+@media only screen and (max-width: 768px){
+  .image-holder-active{
+    align-items: flex-end;
+  }
+
+  .project{
+    width: 100vw;
+  }
+
+  .project-active{
+    height: 80vh;
+    width: 100vw;
+  }
+}
+
 .project h1{
   align-self: center;
   opacity: 0;
@@ -223,6 +257,13 @@ nav .burger-active .burger-icon:hover{
   color: transparent;
   -webkit-text-stroke: 1px #ffffff;
   transform: translateY(-6rem);
+}
+
+@media only screen and (max-width: 768px){
+  .project h1{
+    font-size: 4.5rem;
+    transform: translateY(-3rem);
+  }
 }
 
 .project-active h1{
@@ -247,6 +288,39 @@ nav .burger-active .burger-icon:hover{
   animation: projectLoader 10s ease-in-out 1.5s infinite forwards;
 }
 
+.projects-header{
+  position: fixed;
+  top: 30vh;
+  left: 5rem;
+  opacity: 0;
+  transition: opacity 0.6s ease 1.5s, color 0.3s ease;
+  color: transparent;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+  -webkit-text-stroke: 1px #ffffff;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 768px){
+  .projects-header{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+}
+
+.projects-header-active{
+  opacity: 1;
+}
+
+.projects-header-active:hover{
+  color: #ffffff;
+}
 
 @keyframes projectLoader{
   0%{
