@@ -1,0 +1,261 @@
+*{
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+*:focus{
+  outline: none;
+}
+
+html{
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  color: #202020;
+  background-color: #ffffff;
+  transition: 0.6s ease;
+  overflow-x: hidden;
+}
+
+@media only screen and (min-width: 1367px){
+  html{
+    font-size: 12px;
+  }
+}
+
+.loading{
+  overflow: hidden;
+  opacity: 0;
+}
+
+#root{
+  transition: 0.6s ease 1s;
+}
+
+.blink{
+  animation: load 1.2s infinite;
+  transition: 0.3s ease;
+}
+
+@keyframes load{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.hide{
+  transform: translateX(-100vw);
+}
+
+.loader{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #202020;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s ease;
+}
+
+.loader h1{
+  font-size: 4rem;
+}
+
+nav{
+  padding: 3rem 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > h1{
+  font-size: 2.5rem;
+}
+
+nav .burger h2{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+nav .burger{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+nav .burger .burger-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 1rem;
+  border: thin solid #202020;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: 0.3s ease;
+}
+
+nav .burger-active .burger-icon{
+  background-color: #202020;
+}
+
+nav .burger .burger-icon:hover{
+  background-color: #202020;
+  cursor: pointer;
+}
+
+nav .burger-active .burger-icon:hover{
+  background-color: #ffffff;
+}
+
+.burger .burger-icon .burger-line{
+  width: 2rem;
+  height: 0.3rem;
+  background-color: #202020;
+  transition: 0.6s ease;
+}
+
+.burger-active .burger-icon .burger-line{
+  background-color: #ffffff;
+  transition: 0.9s ease;
+}
+
+.burger-active .burger-icon .line1{
+  transform: translateY(0.575rem) rotate(45deg);
+}
+
+.burger-active .burger-icon .line2{
+  opacity: 0;
+}
+
+.burger-active .burger-icon .line3{
+  transform: translateY(-0.575rem) rotate(-45deg);
+}
+
+.burger .burger-icon:hover .burger-line{
+  background-color: #ffffff;
+}
+
+.burger-active .burger-icon:hover .burger-line{
+  background-color: #202020;
+}
+
+.hero{
+  margin: 2.5rem 0rem;
+}
+
+.hero .hero-header{
+  font-size: 4.5rem;
+  font-family: 'Playful Display', serif;
+  font-weight: 400;
+  padding: 1rem 10rem 0rem;
+}
+
+.image-holder{
+  width: 100%;
+}
+
+.image-holder{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: 0.6s ease;
+}
+
+.image-holder-active{
+  align-items: center;
+}
+
+.project{
+  height: 80vh;
+  width: calc(100vw - 20rem);
+  background: url('./hero-back.png'), rgba(0,0,0,0);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  transition: 0.6s ease 0.6s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.proj-one{
+  background-image: url('./hero-back.png');
+}
+
+.proj-two{
+  background-image: url('./proj-one.png');
+}
+
+.project-active{
+  height: 70vh;
+  width: calc(100vw - 30rem);
+  background-color: rgba(0,0,0,0.3);
+}
+
+.project h1{
+  align-self: center;
+  opacity: 0;
+  font-size: 9rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -0.25rem;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  transform: translateY(-6rem);
+}
+
+.project-active h1{
+  opacity: 0;
+  transition: color 0.3s ease, letter-spacing 0.6s ease;
+}
+
+.project-active .active-header{
+  color: #fff;
+  opacity: 1;
+  letter-spacing: 0.25rem;
+  transition: color 0.3s ease 1.5s, letter-spacing 0.6s ease 1.2s, opacity 0.3s ease;
+}
+
+.project-active:hover{
+  cursor: pointer;
+}
+
+.project-active .project-loader{
+  height: 0.5rem;
+  background-color: #ffffff;
+  animation: projectLoader 10s ease-in-out 1.5s infinite forwards;
+}
+
+
+@keyframes projectLoader{
+  0%{
+    width: 0%;
+  }
+  80%{
+    width: 100%;
+  }
+  100%{
+    width: 100%;
+  }
+}
