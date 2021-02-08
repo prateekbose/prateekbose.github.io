@@ -8,6 +8,10 @@
   outline: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 html{
   font-size: 10px;
   font-family: 'Montserrat', sans-serif;
@@ -292,6 +296,21 @@ nav .burger-active .burger-icon:hover{
   align-items: flex-start;
 }
 
+.project > h1{
+  font-family: 'Playfair Display', serif;
+  align-self: flex-end;
+  font-size: 5rem;
+  font-weight: 400;
+  margin: 1rem 2rem 0rem;
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.3s ease 1.5s;
+}
+
+.project-active > h1{
+  opacity: 1;
+}
+
 .proj-one{
   background-image: url('./hero-back.png');
 }
@@ -316,36 +335,41 @@ nav .burger-active .burger-icon:hover{
   }
 
   .project-active{
-    height: 80vh;
+    height: 85vh;
     width: 100vw;
   }
 }
 
-.project h1{
-  align-self: center;
+.project div h1{
   opacity: 0;
+  margin-left: 2rem;
   font-size: 9rem;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: -0.25rem;
   color: transparent;
   -webkit-text-stroke: 1px #ffffff;
-  transform: translateY(-6rem);
 }
 
 @media only screen and (max-width: 768px){
-  .project h1{
-    font-size: 4.5rem;
-    transform: translateY(-3rem);
+  .project > h1{
+    font-size: 7.5rem;
+    transform: translateY(-12.5vh);
+    align-self: flex-start;
   }
+
+  .project div h1{
+    font-size: 5rem;
+  }
+
 }
 
-.project-active h1{
+.project-active div h1{
   opacity: 0;
   transition: color 0.3s ease, letter-spacing 0.6s ease;
 }
 
-.project-active .active-header{
+.project-active div .active-header{
   color: #fff;
   opacity: 1;
   letter-spacing: 0.25rem;
@@ -356,7 +380,7 @@ nav .burger-active .burger-icon:hover{
   cursor: pointer;
 }
 
-.project-active .project-loader{
+.project-active div .project-loader{
   height: 0.5rem;
   background-color: #ffffff;
   animation: projectLoader 10s ease-in-out 1.5s infinite forwards;
