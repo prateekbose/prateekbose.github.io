@@ -590,7 +590,7 @@ nav .burger-active .burger-icon:hover{
     height: auto;
     justify-content: flex-end;
     gap: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-bottom: 10vh;
   }
 
   .links-section h1{
