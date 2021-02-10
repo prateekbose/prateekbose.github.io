@@ -296,6 +296,7 @@ nav .burger-active .burger-icon:hover{
 
 .image-holder-active{
   align-items: center;
+  background-color: #202020;
 }
 
 .project{
@@ -380,6 +381,10 @@ nav .burger-active .burger-icon:hover{
     font-size: 5rem;
   }
 
+  .project div{
+    width: 100%;
+  }
+
 }
 
 .project-active div h1{
@@ -400,6 +405,7 @@ nav .burger-active .burger-icon:hover{
 
 .project-active div .project-loader{
   height: 0.5rem;
+  width: 100%;
   background-color: #ffffff;
   animation: projectLoader 10s ease-in-out 1.5s infinite forwards;
 }
