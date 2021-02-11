@@ -12,10 +12,6 @@
   display: none;
 }
 
-.no-scroll{
-  overflow: hidden;
-}
-
 html{
   font-size: 10px;
   font-family: 'Montserrat', sans-serif;
@@ -524,4 +520,8 @@ nav .burger{
 
 .hide-text{
   color: rgba(0,0,0,0);
+}
+
+.no-scroll{
+  overflow-y: hidden;
 }
