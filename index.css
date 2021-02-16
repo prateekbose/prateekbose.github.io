@@ -652,6 +652,87 @@ nav .burger{
   }
 }
 
+.item-page{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  background-color: #ffffff;
+  z-index: 999;
+}
+
+.item-page{
+  width: 100vw;
+  background: url('./hero-back.png'), rgba(0,0,0,0.3);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+.item-page .section-burger{
+  margin: 2.5rem 10rem;
+}
+
+.item-page .item-details{
+  padding: 2.5rem 10rem;
+  margin-top: 60vh;
+  background-color: #ffffff;
+}
+
+@media only screen and (max-width: 768px){
+  .item-page .item-details{
+    padding: 1.5rem;
+  }
+
+  .item-page .section-burger{
+    margin: 1.5rem;
+  }
+}
+
+.item-details .header{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item-details .header h1{
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.item-details .header h2{
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+.item-details .header ul{
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.item-details .header li{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.item-details .header p{
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.item-page .section-burger{
+  z-index: 999;
+}
+
+.overflow-none{
+  height: 0;
+}
+
 .hide-text{
   color: rgba(0,0,0,0);
 }
