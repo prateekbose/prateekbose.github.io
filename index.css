@@ -729,6 +729,30 @@ nav .burger{
   z-index: 999;
 }
 
+.item-page .item-image-section{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.item-page .item-image-section .item-image{
+  margin: 5rem 10rem;
+  height: calc(100vh - 10rem);
+  width: calc(100vw - 20rem);
+  background: url('./proj-one.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px){
+  .item-page .item-image-section .item-image{
+    margin: 1.5rem;
+    height: calc(50vh - 3rem);
+    width: calc(100vw - 3rem);
+  }
+}
+
 .overflow-none{
   height: 0;
 }
