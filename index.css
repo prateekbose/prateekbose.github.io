@@ -583,6 +583,7 @@ nav .burger{
   flex-direction: column;
   gap: 5rem;
   background-color: #202020;
+  z-index: 999;
 }
 
 .project-item-section{
@@ -684,12 +685,25 @@ nav .burger{
 }
 
 @media only screen and (max-width: 768px){
+  .item-page{
+    background: #ffffff;
+  }
+
   .item-page .item-details{
     padding: 1.5rem;
+    margin-top: 0vh;
   }
 
   .item-page .section-burger{
     margin: 1.5rem;
+  }
+
+  .item-page .section-burger{
+    border: thin solid #202020;
+  }
+
+  .item-page .section-burger .line{
+    background-color: #202020;
   }
 }
 
