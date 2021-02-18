@@ -667,20 +667,48 @@ nav .burger{
 
 .item-page{
   width: 100vw;
-  background: url('./hero-back.png'), rgba(0,0,0,0.3);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
+  background-color: #ffffff;
 }
 
 .item-page .section-burger{
   margin: 2.5rem 10rem;
 }
 
+.item-page .item-image{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -16vh;
+  padding-top: 6vh;
+  background-color: #202020;
+}
+
+.item-page .item-image h1{
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.item-page .item-image img{
+  height: 48rem;
+  width: 64rem;
+  filter: drop-shadow(0 0.5rem 1rem rgba(0,0,0,0.5));
+  transform: translateY(5vh);
+}
+
 .item-page .item-details{
-  padding: 2.5rem 10rem;
-  margin-top: 60vh;
+  padding: 12.5vh 10rem 2.5rem;
+  background-color: #ffffff;
+}
+
+.item-page .section-burger{
+  border: thin solid #ffffff;
+  z-index: 999;
+}
+
+.item-page .section-burger .line{
   background-color: #ffffff;
 }
 
@@ -690,20 +718,22 @@ nav .burger{
   }
 
   .item-page .item-details{
-    padding: 1.5rem;
-    margin-top: 0vh;
+    padding: 5vh 1.5rem 1.5rem;
   }
 
   .item-page .section-burger{
     margin: 1.5rem;
   }
 
-  .item-page .section-burger{
-    border: thin solid #202020;
+  .item-page .item-image h1{
+    padding-top: 2.5vh;
+    font-size: 3.5rem;
   }
-
-  .item-page .section-burger .line{
-    background-color: #202020;
+  
+  .item-page .item-image img{
+    height: 30rem;
+    width: 40rem;
+    transform: translateY(2.5vh);
   }
 }
 
