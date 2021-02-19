@@ -70,7 +70,7 @@ html{
 
 .side-links-left{
   position: fixed;
-  top: 30%;
+  top: 40%;
   left: 2.5%;
   display: flex;
   flex-direction: column;
@@ -387,11 +387,11 @@ nav .burger{
 }
 
 .proj-one{
-  background-image: url('./hero-back.png');
+  background-image: url('./travelaholic.png');
 }
 
 .proj-two{
-  background-image: url('./proj-one.png');
+  background-image: url('./hungri.png');
 }
 
 .project-active{
@@ -692,7 +692,7 @@ nav .burger{
 }
 
 .item-page .item-image img{
-  height: 48rem;
+  height: 36rem;
   width: 64rem;
   filter: drop-shadow(0 0.5rem 1rem rgba(0,0,0,0.5));
   transform: translateY(5vh);
@@ -710,6 +710,14 @@ nav .burger{
 
 .item-page .section-burger .line{
   background-color: #ffffff;
+}
+
+.item-page .dark{
+  border: thin solid #202020 ;
+}
+
+.item-page .dark .line{
+  background-color: #202020;
 }
 
 @media only screen and (max-width: 768px){
@@ -731,7 +739,7 @@ nav .burger{
   }
   
   .item-page .item-image img{
-    height: 30rem;
+    height: 22.5rem;
     width: 40rem;
     transform: translateY(2.5vh);
   }
@@ -781,23 +789,39 @@ nav .burger{
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
+  margin: 10rem 10rem 5rem;
 }
 
 .item-page .item-image-section .item-image{
-  margin: 5rem 10rem;
-  height: calc(100vh - 10rem);
-  width: calc(100vw - 20rem);
-  background: url('./proj-one.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background: #404040;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-page .item-image-section .item-image img{
+  width: 80rem;
+  height: 45rem;
+  object-fit: cover;
+  filter: drop-shadow(0 0 1rem rgba(0,0,0,0.3));
 }
 
 @media only screen and (max-width: 768px){
   .item-page .item-image-section .item-image{
-    margin: 1.5rem;
-    height: calc(50vh - 3rem);
-    width: calc(100vw - 3rem);
+    height: 40vh;
+    width: 100vw;
+  }
+
+  .item-page .item-image-section{
+    margin: 17.5rem 0rem 0rem;
+  }
+
+  .item-page .item-image-section .item-image img{
+    width: 48rem;
+    height: 27rem;
+    object-fit: cover;
   }
 }
 
