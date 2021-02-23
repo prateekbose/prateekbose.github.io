@@ -749,6 +749,15 @@ nav .burger{
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.item-details .item-link{
+  margin: 1rem 0rem;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background-color: #202020;
+  color: #ffffff;
 }
 
 .item-details .header h1{
