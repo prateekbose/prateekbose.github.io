@@ -752,6 +752,11 @@ nav .burger{
   margin-bottom: 1.5rem;
 }
 
+.item-details .item-links{
+  display: flex;
+  gap: 1rem;
+}
+
 .item-details .item-link{
   margin: 1rem 0rem;
   font-size: 2rem;
