@@ -789,7 +789,7 @@ nav .burger{
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-  margin: 10rem 10rem 5rem;
+  margin: 15rem 10rem 5rem;
 }
 
 .item-page .item-image-section .item-image{
