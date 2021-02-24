@@ -79,7 +79,7 @@ html{
 
 .side-links-right{
   position: fixed;
-  top: 35%;
+  top: 25%;
   right: 2.5%;
 }
 
@@ -387,11 +387,11 @@ nav .burger{
 }
 
 .proj-one{
-  background-image: url('./travelaholic.png');
+  background-image: url('./travelaholic.jpg');
 }
 
 .proj-two{
-  background-image: url('./hungri.png');
+  background-image: url('./hungri.jpg');
 }
 
 .project-active{
