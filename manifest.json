@@ -12,13 +12,13 @@
       "src": "https://prateekbose.github.io/logo192.png",
       "type": "image/png",
       "sizes": "192x192",
-      "purpose": "Small Icon"
+      "purpose": "maskable any"
     },
     {
       "src": "https://prateekbose.github.io/logo512.png",
       "type": "image/png",
       "sizes": "512x512",
-      "purpose": "Large Icon"
+      "purpose": "maskable any"
     }
   ],
   "start_url": "https://prateekbose.github.io/",
