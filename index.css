@@ -394,6 +394,10 @@ nav .burger{
   background-image: url('./hungri.jpg');
 }
 
+.proj-three{
+  background-image: url('./mindfull.jpg');
+}
+
 .project-active{
   height: 75vh;
   background-color: rgba(0,0,0,0.3);
